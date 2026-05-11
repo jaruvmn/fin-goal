@@ -951,7 +951,7 @@ function adminScenario(n) {
 
   if(n === 1) {
     // All D + goal[1] → ความฝันเป็นจริงแต่ไม่มีความสุข (mainRaw=0, fsActualMult=12)
-    goalIdx = 1;
+    goalIdx = 0;
 
   } else if(n === 2) {
     // 1 main A, rest D → ออมเก่งแต่ประหยัดเกิน (mainRaw=3, sw>=goal[0].save)
@@ -1049,7 +1049,7 @@ function adminDream(d) {
   <button onclick="adminGo('goalselect')" class="adm-btn" style="background:#047857">🎯 เป้าหมาย</button>
   <button onclick="adminGo('result')"     class="adm-btn" style="background:#b45309">📊 ผลลัพธ์</button>
   <div style="font-size:.55rem;color:#aab;text-align:center;margin-top:.2rem;letter-spacing:.05em">ความฝัน</div>
-  <button onclick="adminDream('art')"   class="adm-btn" style="background:#b45309;font-size:.7rem">🎸 นักดนตรี</button>
+  <button onclick="adminDream('art')"   class="adm-btn" style="background:#b45309;font-size:.7rem">🎸 ศิลปิน</button>
   <button onclick="adminDream('study')" class="adm-btn" style="background:#1565C0;font-size:.7rem">📚 นักเรียน</button>
   <button onclick="adminDream('sport')" class="adm-btn" style="background:#047857;font-size:.7rem">🏅 นักกีฬา</button>
   <div style="font-size:.55rem;color:#aab;text-align:center;margin-top:.2rem;letter-spacing:.05em">ADVICE</div>
