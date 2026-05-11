@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
@@ -278,8 +278,8 @@ body{font-family:'Noto Sans Thai','Sarabun',sans-serif;background:var(--bg);colo
     <div class="dream-grid">
       <div class="dream-card art" data-char="art" onclick="pickDream(this)">
         <div class="d-emoji">🎸</div>
-        <div class="d-name">ศิลปิน</div>
-        <div class="d-desc">อยากเป็นนักดนตรี<br>มีเพลงล้านวิว</div>
+        <div class="d-name">นักดนตรี</div>
+        <div class="d-desc">อยากเป็นศิลปิน<br>มีเพลงล้านวิว</div>
       </div>
       <div class="dream-card sport" data-char="sport" onclick="pickDream(this)">
         <div class="d-emoji">🏅</div>
@@ -364,7 +364,7 @@ const BUDGET = 1200;
 
 /* ความฝัน 3 สาย — ใช้ชื่อนี้เป็น key ทุกที่ */
 const DREAMS  = ['art','study','sport'];
-const DNAMES  = { art:'ศิลปิน',  study:'นักเรียนดีเด่น', sport:'นักกีฬา' };
+const DNAMES  = { art:'นักดนตรี',  study:'นักเรียนดีเด่น', sport:'นักกีฬา' };
 const DEMOJIS = { art:'🎸',      study:'📚',              sport:'🏅'      };
 const DCOLORS = { art:'#f59e0b', study:'#3b82f6',         sport:'#10b981' };
 
@@ -807,23 +807,7 @@ function showResult() {
       <div class="money-row"><span class="m-label">ออม 52 สัปดาห์ (1 ปี)</span><span class="m-val good">฿${sy.toLocaleString()}</span></div>
     </div>
 
-    <div class="r-section">
-      <div class="rst">🎯 เป้าหมายที่เลือก</div>
-      <div class="goal-disp">
-  <div class="gd-emoji">${goal.emoji}</div>
-  <div class="gd-info">
-    <div class="gd-name">${goal.name}</div>
-    <div class="gd-price">฿${goal.price.toLocaleString()}</div>
-    <div class="gd-price">ต้องออม ฿${goal.save}/สัปดาห์</div>
-  </div>
-
-  <div class="gd-mult" style="color:${achieved?'var(--gold)':'#f87171'};">
-    คะแนน ${DEMOJIS[mainDream]} ${DNAMES[mainDream]} ×${actualMult}
-  </div>
-</div>
-    </div>
-
-    <div class="r-section">
+<div class="r-section">
       <div class="rst">📊 คะแนนแต่ละด้าน</div>
       <div class="score-wrap">
         ${DREAMS.map(d=>`
@@ -837,6 +821,30 @@ function showResult() {
         ตัวคูณความฝัน: ${DREAMS.map(d=>`${DEMOJIS[d]} ×${cm[d]}`).join(' / ')}
       </div>
     </div>
+    <div class="r-section">
+  <div class="rst">🎯 เป้าหมายที่เลือก</div>
+
+  <div class="goal-disp">
+    <div class="gd-emoji">${goal.emoji}</div>
+
+    <div class="gd-info">
+      <div class="gd-name">${goal.name}</div>
+      <div class="gd-price">฿${goal.price.toLocaleString()}</div>
+      <div class="gd-price">ต้องออม ฿${goal.save}/สัปดาห์</div>
+
+     <div class="gd-mult" style="
+  color:${achieved?'var(--gold)':'#f87171'};
+  text-align:left;
+  margin-top:4px;
+font-size:15px;
+  font-weight:600;
+">
+  คะแนน ${DEMOJIS[mainDream]} ${DNAMES[mainDream]} ×${actualMult}
+</div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <div class="final-box" style="background:${tC.bg};border-color:${tC.border};">
       <div class="fl">สรุปคะแนน</div>
@@ -1041,7 +1049,7 @@ function adminDream(d) {
   <button onclick="adminGo('goalselect')" class="adm-btn" style="background:#047857">🎯 เป้าหมาย</button>
   <button onclick="adminGo('result')"     class="adm-btn" style="background:#b45309">📊 ผลลัพธ์</button>
   <div style="font-size:.55rem;color:#aab;text-align:center;margin-top:.2rem;letter-spacing:.05em">ความฝัน</div>
-  <button onclick="adminDream('art')"   class="adm-btn" style="background:#b45309;font-size:.7rem">🎸 ศิลปิน</button>
+  <button onclick="adminDream('art')"   class="adm-btn" style="background:#b45309;font-size:.7rem">🎸 นักดนตรี</button>
   <button onclick="adminDream('study')" class="adm-btn" style="background:#1565C0;font-size:.7rem">📚 นักเรียน</button>
   <button onclick="adminDream('sport')" class="adm-btn" style="background:#047857;font-size:.7rem">🏅 นักกีฬา</button>
   <div style="font-size:.55rem;color:#aab;text-align:center;margin-top:.2rem;letter-spacing:.05em">ADVICE</div>
