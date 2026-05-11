@@ -816,9 +816,13 @@ function showResult() {
           <div class="gd-price">฿${goal.price.toLocaleString()}</div>
           <div class="gd-price">ต้องออม ฿${goal.save}/สัปดาห์</div>
         </div>
-        <div class="gd-mult" style="color:${achieved?'var(--gold)':'#f87171'};white-space:nowrap;">คะแนน ${DEMOJIS[mainDream]} ${DNAMES[mainDream]}
-        ×${actualMult}</div>
-      </div>
+        <div class="gd-mult" style="
+  color:${achieved?'var(--gold)':'#f87171'};
+  white-space:normal;
+  text-align:center;
+">
+คะแนน ${DEMOJIS[mainDream]} ${DNAMES[mainDream]} ×${actualMult}
+</div>
     </div>
 
     <div class="r-section">
