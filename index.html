@@ -810,19 +810,16 @@ function showResult() {
     <div class="r-section">
       <div class="rst">🎯 เป้าหมายที่เลือก</div>
       <div class="goal-disp">
-        <div class="gd-emoji">${goal.emoji}</div>
-        <div class="gd-info">
-          <div class="gd-name">${goal.name}</div>
-          <div class="gd-price">฿${goal.price.toLocaleString()}</div>
-          <div class="gd-price">ต้องออม ฿${goal.save}/สัปดาห์</div>
-        </div>
-   <div class="gd-mult" style="
-  color:${achieved?'var(--gold)':'#f87171'};
-  line-height:1.4;
-  text-align:center;
-">
-  คะแนน ${DEMOJIS[mainDream]} ${DNAMES[mainDream]}<br>
-  ×${actualMult}
+  <div class="gd-emoji">${goal.emoji}</div>
+  <div class="gd-info">
+    <div class="gd-name">${goal.name}</div>
+    <div class="gd-price">฿${goal.price.toLocaleString()}</div>
+    <div class="gd-price">ต้องออม ฿${goal.save}/สัปดาห์</div>
+  </div>
+
+  <div class="gd-mult" style="color:${achieved?'var(--gold)':'#f87171'};">
+    คะแนน ${DEMOJIS[mainDream]} ${DNAMES[mainDream]} ×${actualMult}
+  </div>
 </div>
     </div>
 
